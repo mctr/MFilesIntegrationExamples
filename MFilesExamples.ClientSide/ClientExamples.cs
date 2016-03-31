@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MFilesExamples.ClientSide
+{
+    public partial class ClientExamples : Form
+    {
+        public ClientExamples()
+        {
+            InitializeComponent();
+        }
+
+        private void btn_Download_Click(object sender, EventArgs e)
+        {
+
+            var downloadForm = new DocumentIdForm();
+            downloadForm.ShowDialog();
+        }
+    }
+}
