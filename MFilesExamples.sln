@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MFilesExamples.ServerSide",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MFilesExamples.REST", "MFilesExamples.REST\MFilesExamples.REST.csproj", "{F9F54CAA-5DD6-4889-8534-31ECDBBD7FBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MFilesExamples.Streaming", "MFilesExamples.Streaming\MFilesExamples.Streaming.csproj", "{82718C9C-39D7-41F4-8A74-28556E6F984F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F9F54CAA-5DD6-4889-8534-31ECDBBD7FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9F54CAA-5DD6-4889-8534-31ECDBBD7FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9F54CAA-5DD6-4889-8534-31ECDBBD7FBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82718C9C-39D7-41F4-8A74-28556E6F984F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82718C9C-39D7-41F4-8A74-28556E6F984F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82718C9C-39D7-41F4-8A74-28556E6F984F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82718C9C-39D7-41F4-8A74-28556E6F984F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
