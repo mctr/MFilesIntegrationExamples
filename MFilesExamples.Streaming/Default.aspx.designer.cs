@@ -13,13 +13,13 @@ namespace MFilesExamples.Streaming {
     public partial class _Default {
         
         /// <summary>
-        /// txtDocumentId control.
+        /// txtDocId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDocumentId;
+        protected global::System.Web.UI.WebControls.TextBox txtDocId;
         
         /// <summary>
         /// btnSend control.
@@ -29,5 +29,23 @@ namespace MFilesExamples.Streaming {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSend;
+        
+        /// <summary>
+        /// videoPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel videoPanel;
+        
+        /// <summary>
+        /// videoPlayer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlVideo videoPlayer;
     }
 }
