@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MFilesExamples.REST", "MFil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MFilesExamples.Streaming", "MFilesExamples.Streaming\MFilesExamples.Streaming.csproj", "{82718C9C-39D7-41F4-8A74-28556E6F984F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MFilesExamples.Streaming.WebAPI", "MFilesExamples.Streaming.WebAPI\MFilesExamples.Streaming.WebAPI.csproj", "{FA1B79B9-CFB5-4F13-8637-89CCB27EF760}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{82718C9C-39D7-41F4-8A74-28556E6F984F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82718C9C-39D7-41F4-8A74-28556E6F984F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82718C9C-39D7-41F4-8A74-28556E6F984F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA1B79B9-CFB5-4F13-8637-89CCB27EF760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA1B79B9-CFB5-4F13-8637-89CCB27EF760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA1B79B9-CFB5-4F13-8637-89CCB27EF760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA1B79B9-CFB5-4F13-8637-89CCB27EF760}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
