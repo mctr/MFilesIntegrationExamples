@@ -62,6 +62,7 @@
             this.btn_Download.TabIndex = 2;
             this.btn_Download.Text = "Download Document";
             this.btn_Download.UseVisualStyleBackColor = true;
+            this.btn_Download.Click += new System.EventHandler(this.btn_Download_Click);
             // 
             // btn_GetListOfDocuments
             // 

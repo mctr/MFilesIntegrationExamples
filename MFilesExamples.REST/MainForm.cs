@@ -125,5 +125,25 @@ namespace MFilesExamples.REST
 
 
         }
+
+        private void btn_Download_Click(object sender, EventArgs e)
+        {
+            if (client.Authentication == null)
+            {
+                MessageBox.Show("Please authenticate first.", "M-Files Examples", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            //Document ObjectType Id is 0
+            var restPath = "/objects/0";
+
+
+            //Make Get Request
+            var documents = client.Get<Results<ObjectVersion>>(restPath);
+
+            //Create the form to display document titles
+            var downloadForm = new DownloadList(documents, client);
+            downloadForm.ShowDialog();
+        }
     }
 }
