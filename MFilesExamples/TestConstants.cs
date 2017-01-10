@@ -18,6 +18,6 @@ namespace MFilesExamples
 
         public static int DocumentId = 5;
 
-        public static string RestServerAddress = "http://localhost/REST/";
+        public static string RestServerAddress = "http://localhost/REST";
     }
 }

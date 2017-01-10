@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MFiles.Mfws;
 using MFiles.Mfws.Structs;
 using System.IO;
+using System.Net;
 
 namespace MFilesExamples.REST
 {
@@ -30,7 +31,7 @@ namespace MFilesExamples.REST
             var auth = new Authentication() { Username = TestConstants.Username, Password = TestConstants.Password, VaultGuid = TestConstants.VaultGUID };
 
             //Define Rest Path
-            var restPath = "/server/authenticationtokens";
+            var restPath = "/server/authenticationtokens.aspx";
 
             //Make Post Request
             var authInfo = client.Post<PrimitiveType<string>>(restPath, auth);
@@ -52,6 +53,7 @@ namespace MFilesExamples.REST
 
             //Document ObjectType Id is 0
             var restPath = "/objects/0";
+
 
 
             //Make Get Request
@@ -95,7 +97,7 @@ namespace MFilesExamples.REST
                 uploadInfos.Add(uploadInfo);
 
                 //Class property
-                var classProp = new PropertyValue() { PropertyDef = 100, TypedValue = new TypedValue() { DataType = MFDataType.Lookup, Lookup = new Lookup() { Version = -1, Item = 0 } } };
+                var classProp = new PropertyValue() { PropertyDef = 100, TypedValue = new TypedValue() { DataType = MFDataType.Lookup, Lookup = new Lookup() { Version = -1, Item = 2 } } };
                 propertyList.Add(classProp);
 
                 //Name property
@@ -103,7 +105,7 @@ namespace MFilesExamples.REST
                 propertyList.Add(nameProp);
 
                 //Sfd Object
-                var sfdProp = new PropertyValue() { PropertyDef = 22, TypedValue = new TypedValue() { DataType = MFDataType.Boolean, Value = true } };
+                var sfdProp = new PropertyValue() { PropertyDef = 22, TypedValue = new TypedValue() { DataType = MFDataType.Boolean, Value = false } };
                 propertyList.Add(sfdProp);
 
                 //Create Object Creation Info
@@ -111,7 +113,7 @@ namespace MFilesExamples.REST
                 oci.Files = uploadInfos.ToArray();
                 oci.PropertyValues = propertyList.ToArray();
 
-                var restPathForObject = "/objects/0";
+                var restPathForObject = "/objects/0.aspx";
 
                 //Make Post Request
                 var createdDocument = client.Post<ObjectVersion>(restPathForObject, oci);
@@ -144,6 +146,33 @@ namespace MFilesExamples.REST
             //Create the form to display document titles
             var downloadForm = new DownloadList(documents, client);
             downloadForm.ShowDialog();
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+
+            if (client.Authentication == null)
+            {
+                MessageBox.Show("Please authenticate first.", "M-Files Examples", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+
+            var searchForm = new SearchForm();
+            var result = searchForm.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                var searchTerm = searchForm.SearchTerm;
+
+                //Full Text Search Document Content & Metadata
+                var restPath = string.Format("/objects/0.aspx?q={0}", searchTerm);
+
+                var objectVersions = client.Get<Results<ObjectVersion>>(restPath);
+
+                var downloadForm = new DownloadList(objectVersions, client);
+                downloadForm.ShowDialog();
+            }
         }
     }
 }

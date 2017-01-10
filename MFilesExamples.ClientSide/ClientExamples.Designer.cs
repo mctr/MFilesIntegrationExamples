@@ -30,6 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.btn_Download = new System.Windows.Forms.Button();
+            this.btn_Search = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -51,11 +52,22 @@
             this.btn_Download.UseVisualStyleBackColor = true;
             this.btn_Download.Click += new System.EventHandler(this.btn_Download_Click);
             // 
+            // btn_Search
+            // 
+            this.btn_Search.Location = new System.Drawing.Point(81, 116);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(123, 23);
+            this.btn_Search.TabIndex = 5;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
             // ClientExamples
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.btn_Download);
             this.Controls.Add(this.button1);
             this.Name = "ClientExamples";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_Download;
+        private System.Windows.Forms.Button btn_Search;
     }
 }
